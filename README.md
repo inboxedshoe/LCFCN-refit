@@ -1,6 +1,6 @@
 # LCFCN - ECCV 2018 
 
-The following fork just adds a few utilities to help make training and testing on new datasets easier 
+The following fork just adds a few utilities to help make training and testing on new datasets easier (work in progress 0%)
 
 ## Where are the Blobs: Counting by Localization with Point Supervision
 [[Paper]](https://arxiv.org/abs/1807.09856)[[Video]](https://youtu.be/DHKD8LGvX6c)
