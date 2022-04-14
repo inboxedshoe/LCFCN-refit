@@ -29,7 +29,7 @@ cudnn.benchmark = True
 
 
 def trainval(exp_dict, savedir_base, datadir, reset=False, num_workers=0):
-    # bookkeepting stuff
+    # bookkeeping stuff
     # ==================
     pprint.pprint(exp_dict)
     exp_id = hu.hash_dict(exp_dict)

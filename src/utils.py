@@ -7,7 +7,7 @@ from torch.utils import data
 import scipy.misc
 import scipy.io as io
 from skimage import draw
-import losses
+#import losses
 from PIL import ImageOps
 from bs4 import BeautifulSoup
 import pickle 
@@ -56,22 +56,22 @@ def loadmat(fname):
     return io.loadmat(fname)
 
 
-@torch.no_grad()
-def compute_loss(model, dataset):
-    n_images = len(dataset)
-    
-    loss_sum = 0.
-    for i in range(n_images):
-        print("{}/{}".format(i, n_images))
-
-        batch = dataset[i]
-        batch["images"] = batch["images"][None]
-        batch["points"] = batch["points"][None]
-        batch["counts"] = batch["counts"][None]
-        
-        loss_sum += losses.lc_loss(model, batch).item()
-
-    return loss_sum
+# @torch.no_grad()
+# def compute_loss(model, dataset):
+#     n_images = len(dataset)
+#
+#     loss_sum = 0.
+#     for i in range(n_images):
+#         print("{}/{}".format(i, n_images))
+#
+#         batch = dataset[i]
+#         batch["images"] = batch["images"][None]
+#         batch["points"] = batch["points"][None]
+#         batch["counts"] = batch["counts"][None]
+#
+#         loss_sum += losses.lc_loss(model, batch).item()
+#
+#     return loss_sum
 
 
 class RandomSampler(data.sampler.Sampler):
